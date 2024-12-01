@@ -1,0 +1,75 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+header, footer {
+  background: #1f1f1f;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #bb86fc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5em;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.intro, .leaderboard {
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Button Styles */
+button {
+  background: #bb86fc;
+  color: #121212;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #a674f9;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
