@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compete on the Staxx leaderboard, showcase your skills, and win incredible prizes.">
+  <meta name="description" content="Staxx Leaderboard - Compete for monthly and weekly prizes in style!">
   <meta name="author" content="staxx, Kutu Loncats, Scooby, jam">
   <meta name="keywords" content="staxx, leaderboard, gambling competition, online casino, crypto casino, rewards">
-  <title>Staxx Leaderboard</title>
+  <title>Leaderboard | StaxX Community</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
@@ -17,10 +17,10 @@
   <header>
     <nav>
       <a href="index.html" id="logo">
-        <img src="logo.png" alt="Staxx Logo" height="50">
+        <img src="logo.png" alt="Staxx Logo" height="50" loading="lazy">
       </a>
       <div class="nav-links">
-        <a href="leaderboard.html">Leaderboard</a>
+        <a href="leaderboard.html" aria-current="page">Leaderboard</a>
         <span class="special-text">StaxX💣</span>
         <a href="index.html">Home</a>
       </div>
@@ -29,62 +29,80 @@
 
   <!-- Main Content -->
   <main>
-    <section class="leaderboard-intro">
-      <h1>Leaderboard</h1>
-      <p>Compete with the best and rise to the top. The leaderboard rewards the most active participants with amazing prizes!</p>
-    </section>
-    
-    <section class="leaderboard-table">
-      <h2>Current Rankings</h2>
-      <table>
+    <!-- Filter Input -->
+    <div class="filter-wrapper">
+      <input type="text" id="filter-input" placeholder="Search leaderboard..." aria-label="Search leaderboard by username or rank">
+    </div>
+
+    <!-- Monthly Leaderboard -->
+    <section class="leaderboard-section" aria-labelledby="monthly-leaderboard">
+      <h1 id="monthly-leaderboard" class="section-heading">Monthly Leaderboard</h1>
+      <p class="prize-pool">🏆 Prize Pool: <span class="highlight">$10,000</span></p>
+      <table class="leaderboard-table" aria-label="Monthly Leaderboard">
         <thead>
           <tr>
-            <th>Rank</th>
-            <th>Username</th>
-            <th>Total Wager</th>
+            <th scope="col">Rank</th>
+            <th scope="col">Username</th>
+            <th scope="col">Wager</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
-            <td>IdkHf</td>
-            <td>$459,314</td>
+            <td>UserA</td>
+            <td>$124,567.89</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>kutu</td>
-            <td>$122,294</td>
+            <td>UserB</td>
+            <td>$12,345.78</td>
           </tr>
           <tr>
             <td>3</td>
-            <td>jam9</td>
-            <td>$76,538</td>
+            <td>UserC</td>
+            <td>$1,234.56</td>
           </tr>
         </tbody>
       </table>
+      <p class="additional-info">Top 5 Biggest Wagers in a Month</p>
     </section>
 
-    <section class="leaderboard-info">
-      <h3>How to Climb the Leaderboard</h3>
-      <p>To climb the leaderboard, engage in daily competitions, place bets, and accumulate winnings. The more active you are, the higher you'll rank!</p>
-    </section>
-
-    <section class="leaderboard-prizes">
-      <h3>Prizes</h3>
-      <ul>
-        <li><strong>1st Place:</strong> $10,000 cash prize</li>
-        <li><strong>2nd Place:</strong> $5,000 bonus balance</li>
-        <li><strong>3rd Place:</strong> Exclusive merchandise</li>
-      </ul>
+    <!-- Weekly Raffle -->
+    <section class="leaderboard-section" aria-labelledby="weekly-raffle">
+      <h1 id="weekly-raffle" class="section-heading">Weekly Raffle</h1>
+      <p class="prize-pool">🏆 Prize Pool: <span class="highlight">$1,000</span></p>
+      <p class="instructions">For every $500 wagered, you earn 1 raffle ticket!</p>
+      <table class="leaderboard-table" aria-label="Weekly Raffle">
+        <thead>
+          <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Username</th>
+            <th scope="col">Wager</th>
+            <th scope="col">Tickets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>UserA</td>
+            <td>$124,567.89</td>
+            <td>55</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>UserB</td>
+            <td>$12,345.78</td>
+            <td>24</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
     <p>© 2024 Stax X LFG. All rights reserved.</p>
-    <p>
-      <a href="https://stax-page.github.io" target="_blank" rel="noopener noreferrer">Visit Us</a>
-    </p>
+    <p><a href="https://stax-page.github.io" target="_blank" rel="noopener noreferrer">Visit Us</a></p>
   </footer>
 
   <!-- Scroll-to-Top Button -->
