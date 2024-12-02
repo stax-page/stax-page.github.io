@@ -3,31 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leaderboard</title>
+  <meta name="description" content="Compete on the Staxx leaderboard, showcase your skills, and win incredible prizes.">
+  <meta name="author" content="staxx, Kutu Loncats, Scooby, jam">
+  <meta name="keywords" content="staxx, leaderboard, gambling competition, online casino, crypto casino, rewards">
+  <title>Staxx Leaderboard</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1 class="title">Leaderboard</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="raffle.html">Raffle</a>
+      <a href="index.html" id="logo">
+        <img src="logo.png" alt="Staxx Logo" height="50">
+      </a>
+      <div class="nav-links">
+        <a href="leaderboard.html">Leaderboard</a>
+        <span class="special-text">StaxX💣</span>
+        <a href="index.html">Home</a>
+      </div>
     </nav>
   </header>
+
+  <!-- Main Content -->
   <main>
-    <section class="leaderboard">
-      <h2>Weekly Top 10</h2>
-      <ul id="weekly-list"></ul>
+    <section class="leaderboard-intro">
+      <h1>Leaderboard</h1>
+      <p>Compete with the best and rise to the top. The leaderboard rewards the most active participants with amazing prizes!</p>
     </section>
-    <section class="leaderboard">
-      <h2>Monthly Top 10</h2>
-      <ul id="monthly-list"></ul>
+    
+    <section class="leaderboard-table">
+      <h2>Current Rankings</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Total Wager</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>IdkHf</td>
+            <td>$459,314</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>kutu</td>
+            <td>$122,294</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>jam9</td>
+            <td>$76,538</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="leaderboard-info">
+      <h3>How to Climb the Leaderboard</h3>
+      <p>To climb the leaderboard, engage in daily competitions, place bets, and accumulate winnings. The more active you are, the higher you'll rank!</p>
+    </section>
+
+    <section class="leaderboard-prizes">
+      <h3>Prizes</h3>
+      <ul>
+        <li><strong>1st Place:</strong> $10,000 cash prize</li>
+        <li><strong>2nd Place:</strong> $5,000 bonus balance</li>
+        <li><strong>3rd Place:</strong> Exclusive merchandise</li>
+      </ul>
     </section>
   </main>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2024 Stax Page. All Rights Reserved.</p>
+    <p>© 2024 Stax X LFG. All rights reserved.</p>
+    <p>
+      <a href="https://stax-page.github.io" target="_blank" rel="noopener noreferrer">Visit Us</a>
+    </p>
   </footer>
+
+  <!-- Scroll-to-Top Button -->
+  <button id="scroll-top" aria-label="Scroll to top">↑</button>
 </body>
 </html>
