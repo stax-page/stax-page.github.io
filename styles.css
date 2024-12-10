@@ -1,224 +1,153 @@
-/* Global Styles */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --primary-color: #ff5656; /* Red */
-  --secondary-color: #c0c0c0; /* Silver */
-  --background-color: #000000; /* Black */
-  --text-color: #ffffff;
-}
-
 body {
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(to bottom, var(--background-color), #2b0000);
-  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  color: #ffffff;
+  background: #111;
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: var(--primary-color);
+/* Background Animation */
+#background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff0099, #493240, #42a5f5);
+  background-size: 300% 300%;
+  animation: gradient-animation 8s ease infinite;
+  z-index: -1;
 }
 
-button {
-  font-size: 1rem;
-  padding: 0.7rem 1.5rem;
-  color: var(--text-color);
-  background: var(--primary-color);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background: #ff2d2d;
-  transform: scale(1.1);
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Header */
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.8);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.nav-links a {
-  margin: 0 1rem;
-  font-weight: bold;
-  color: var(--secondary-color);
-}
-
-/* Main Content */
-.hero {
+header {
   text-align: center;
-  padding: 4rem 1rem;
-  animation: fade-in 1.5s ease-in-out;
+  padding: 100px 20px;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.highlight {
-  color: var(--primary-color);
-}
-
-.promo-section,
-.community {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-/* Carousel */
-.carousel {
-  display: flex;
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  white-space: nowrap;
   overflow: hidden;
-  position: relative;
-  height: 60px;
+  border-right: 2px solid #fff;
 }
 
-.carousel-item {
-  min-width: 100%;
-  text-align: center;
+header p {
+  font-size: 1.5rem;
+  color: #ccc;
+}
+
+.explore-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
   font-size: 1.2rem;
-  color: var(--text-color);
-  background: var(--primary-color);
-  border-radius: 8px;
-  animation: carousel-scroll 6s linear infinite;
-}
-
-/* Filter Input */
-.filter-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 2rem 0;
-}
-
-#filter-input {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: 2px solid var(--primary-color);
-  border-radius: 8px;
-  width: 80%;
-  max-width: 500px;
-  background: rgba(0, 0, 0, 0.7);
-  color: var(--text-color);
-}
-
-#filter-input:focus {
-  outline: none;
-  border-color: #ff2d2d;
-}
-
-/* Leaderboard Table */
-.leaderboard-table {
-  width: 90%;
-  max-width: 800px;
-  margin: 1rem auto;
-  border-collapse: collapse;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.9);
-}
-
-.leaderboard-table th,
-.leaderboard-table td {
-  padding: 0.8rem;
-  border: 1px solid var(--secondary-color);
-}
-
-.leaderboard-table tr:hover {
-  background: rgba(255, 86, 86, 0.2);
-  color: var(--primary-color);
-  font-weight: bold;
-  transform: scale(1.05);
-  transition: all 0.3s ease;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-/* Scroll-to-Top Button */
-#scroll-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  background: var(--primary-color);
-  color: var(--text-color);
+  color: #111;
+  background: #fff;
   border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-#scroll-top:hover {
-  background: #ff2d2d;
+.explore-btn:hover {
+  transform: scale(1.1);
+  background: #ff0099;
+  color: #fff;
 }
 
-/* Animations */
-@keyframes fade-in {
+/* Sections */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#features .feature {
+  margin: 20px auto;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#features .feature:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Typing Effect for Header */
+.typing-effect {
+  animation: typing 4s steps(30, end), blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
   from {
-    opacity: 0;
-    transform: translateY(-20px);
+    width: 0;
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    width: 100%;
   }
 }
 
-@keyframes carousel-scroll {
-  0% {
-    transform: translateX(0%);
+@keyframes blink {
+  from {
+    border-color: transparent;
   }
-  33% {
-    transform: translateX(-100%);
+  to {
+    border-color: white;
   }
-  66% {
-    transform: translateX(-200%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
+}
+
+/* Scroll-triggered Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Hover Effects */
+.hover-effect {
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.hover-effect:hover {
+  transform: rotate(5deg) translateY(-10px);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem;
+  header h1 {
+    font-size: 2rem;
   }
 
-  button {
-    padding: 0.5rem 1rem;
-  }
-
-  .promo-img,
-  .main-gif {
-    width: 90%;
-    height: auto;
-  }
-
-  .leaderboard-table td {
-    font-size: 0.9rem;
-    padding: 0.5rem;
-  }
-
-  .filter-wrapper {
-    margin: 1.5rem 0;
-  }
-
-  #filter-input {
-    width: 90%;
+  header p {
+    font-size: 1rem;
   }
 }
