@@ -1,6 +1,3 @@
-
-### ** Set Up Your Domain (staxx.in)**
-
 #### **Already Own the Domain "staxx.in"**
 1. Go to your Hostinger dashboard:
    - Click on **Domains** > **Add Existing Domain**.
