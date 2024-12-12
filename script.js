@@ -1,46 +1,46 @@
-// Utility: Show or Hide Elements
-const toggleVisibility = (element, condition) => {
-  element.style.display = condition ? "block" : "none";
-};
+// Sticky Header Scroll Effect
+const navbar = document.querySelector('header nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
 
 // Scroll-to-Top Button
-const scrollTopBtn = document.getElementById("scroll-top");
-
-window.addEventListener("scroll", () => {
-  toggleVisibility(scrollTopBtn, window.scrollY > 300);
+const scrollTopButton = document.getElementById('scroll-top');
+window.addEventListener('scroll', () => {
+  scrollTopButton.style.display = window.scrollY > 200 ? 'block' : 'none';
+});
+scrollTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-scrollTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// Intersection Observer for Section Animations
-const sections = document.querySelectorAll("section");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("fade-in");
-      }
-    });
-  },
-  { threshold: 0.5 }
-);
-
-sections.forEach((section) => observer.observe(section));
-
-// Leaderboard Carousel Interaction
-const carousel = document.querySelector(".carousel");
-
-if (carousel) {
-  let carouselIndex = 0;
-
-  setInterval(() => {
-    carouselIndex = (carouselIndex + 1) % carousel.children.length;
-    carousel.style.transform = `translateX(-${carouselIndex * 100}%)`;
-  }, 3000);
+// Carousel Functionality
+const carouselItems = document.querySelectorAll('.carousel-item');
+let currentIndex = 0;
+function showCarouselItem(index) {
+  carouselItems.forEach((item, i) => {
+    item.style.display = i === index ? 'block' : 'none';
+  });
 }
+function nextCarouselItem() {
+  currentIndex = (currentIndex + 1) % carouselItems.length;
+  showCarouselItem(currentIndex);
+}
+setInterval(nextCarouselItem, 5000); // Auto-advance carousel every 5 seconds
+
+// Form Validation
+document.querySelector('form').addEventListener('submit', (e) => {
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  if (!name || !email || !message) {
+    e.preventDefault();
+    alert('All fields are required!');
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+    e.preventDefault();
+    alert('Please enter a valid email.');
+  }
+});
 
 // Filter Leaderboard
 const filterInput = document.getElementById("filter-input");
