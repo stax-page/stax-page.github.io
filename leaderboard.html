@@ -3,30 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Staxx Leaderboard - Compete for monthly and weekly prizes in style!">
-  <meta name="author" content="staxx, Kutu Loncats, Scooby, jam">
-  <meta name="keywords" content="staxx, leaderboard, gambling competition, online casino, crypto casino, rewards">
-  <title>Leaderboard | StaxX Community</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Join Staxx Community for the ultimate gambling experience. Online casino, win prizes, and rise on the leaderboard!">
+  <meta name="author" content="Staxx, Kutu Loncats, Scooby, Jam">
+  <meta name="keywords" content="staxx, affiliate, gambling promotion, online casino, vip transfer, crypto casino, free spin bonus, deposit bonus, stream, give away">
+  <meta property="og:title" content="Staxx Community">
+  <meta property="og:description" content="Join Staxx Community for the ultimate gambling experience.">
+  <meta property="og:image" content="staxx.png">
+  <meta property="og:url" content="https://staxx.in">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Staxx Community</title>
+  <link rel="stylesheet" href="styles_updated.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
 <body>
+  <div id="background-animation"></div>
   <!-- Header -->
+  
   <header>
     <nav>
-      <a href="index.html" id="logo">
-        <img src="logo.png" alt="Staxx Logo" height="50" loading="lazy">
-      </a>
       <div class="nav-links">
+        <a href="index.html" id="logo">
+        <img src="staxx.png" alt="Staxx Logo" height="50" loading="lazy">
+        <a href="#contact">Contact</a>
         <a href="leaderboard.html" aria-current="page">Leaderboard</a>
-        <span class="special-text">StaxX💣</span>
-        <a href="index.html">Home</a>
       </div>
     </nav>
   </header>
-
   <!-- Main Content -->
   <main>
     <!-- Filter Input -->
@@ -41,68 +45,121 @@
       <table class="leaderboard-table" aria-label="Monthly Leaderboard">
         <thead>
           <tr>
-            <th scope="col">Rank</th>
             <th scope="col">Username</th>
-            <th scope="col">Wager</th>
+            <th scope="col">wager</th>
+            <th scope="col">prize</th>
           </tr>
         </thead>
         <tbody>
+            <tr>
+            <td>1st</td>
+            <td>Prize</td>
+            <td>$3,000</td> 
+          </tr>
           <tr>
-            <td>1</td>
+            <td>2nd</td>
+            <td>Prize</td>
+            <td>$2,000</td>
+          </tr>
+          <tr>
+            <td>3rd</td>
+            <td>Prize</td>
+            <td>$1,500</td>
+          </tr>
+          <tr>
+            <td>4th</td>
+            <td>Prize</td>
+            <td>$800</td>
+          </tr>
+          <tr>
+            <td>5th</td>
+            <td>Prize</td>
+            <td>$500</td> 
+          </tr>
+          <tr>
+            <td>6th</td>
+            <td>Prize</td>
+            <td>$400</td>
+          </tr>
+          <tr>
+            <td>7th</td>
+            <td>Prize</td>
+            <td>$350</td>
+          </tr>
+          <tr>
+            <td>8th</td>
+            <td>Prize</td>
+            <td>$300</td>
+          </tr>
+          <tr>
+            <td>9th</td>
+            <td>Prize</td>
+            <td>$250</td> 
+          </tr>
+          <tr>
+            <td>10th</td>
+            <td>Prize</td>
+            <td>$200</td>
+          </tr>
+          <tr>
+            <td>11th</td>
+            <td>Prize</td>
+            <td>$100</td>
+          </tr>
+          <tr>
+            <td>12th</td>
+            <td>Prize</td>
+            <td>$90</td>
+          </tr>
+          <tr>
+            <td>13th</td>
             <td>UserA</td>
-            <td>$124,567.89</td>
+            <td>$80</td> 
           </tr>
           <tr>
-            <td>2</td>
-            <td>UserB</td>
-            <td>$12,345.78</td>
+            <td>14th</td>
+            <td>PrizeB</td>
+            <td>$70</td>
           </tr>
           <tr>
-            <td>3</td>
-            <td>UserC</td>
-            <td>$1,234.56</td>
+            <td>15th</td>
+            <td>PrizeC</td>
+            <td>$60</td>
+          </tr>
+          <tr>
+            <td>16th</td>
+            <td>PrizeD</td>
+            <td>$50</td>
+          </tr>
+            <td>17th</td>
+            <td>Prize</td>
+            <td>$40</td>
+          </tr>
+          <tr>
+            <td>18th</td>
+            <td>Prize</td>
+            <td>$30</td>
+          </tr>
+          <tr>
+            <td>19th</td>
+            <td>Prize</td>
+            <td>$20</td> 
+          </tr>
+          <tr>
+            <td>20th</td>
+            <td>Prize</td>
+            <td>$10</td>
           </tr>
         </tbody>
       </table>
-      <p class="additional-info">Top 5 Biggest Wagers in a Month</p>
+      <p class="additional-info">Top 20 Ldb</p>
     </section>
 
-    <!-- Weekly Raffle -->
-    <section class="leaderboard-section" aria-labelledby="weekly-raffle">
-      <h1 id="weekly-raffle" class="section-heading">Weekly Raffle</h1>
-      <p class="prize-pool">🏆 Prize Pool: <span class="highlight">$1,000</span></p>
-      <p class="instructions">For every $500 wagered, you earn 1 raffle ticket!</p>
-      <table class="leaderboard-table" aria-label="Weekly Raffle">
-        <thead>
-          <tr>
-            <th scope="col">Rank</th>
-            <th scope="col">Username</th>
-            <th scope="col">Wager</th>
-            <th scope="col">Tickets</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>UserA</td>
-            <td>$124,567.89</td>
-            <td>55</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>UserB</td>
-            <td>$12,345.78</td>
-            <td>24</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>© 2024 Stax X LFG. All rights reserved.</p>
-    <p><a href="https://stax-page.github.io" target="_blank" rel="noopener noreferrer">Visit Us</a></p>
+    <p>© 2024 StaxX . All rights reserved.</p>
   </footer>
 
   <!-- Scroll-to-Top Button -->
